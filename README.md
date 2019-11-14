@@ -24,10 +24,10 @@ Columns:
   - Infovis  (d3.js)
 
 - TBD factors: 
-  - [ ]How many visuals (d3, tableau?)
-  - [ ]Focus on what aspect? 
-  - [ ]Do we need any other dataset?
-  - [ ]What layout?
+  - [ ] How many visuals (d3, tableau?)
+  - [ ] Focus on what aspect? 
+  - [ ] Do we need any other dataset?
+  - [ ] What layout?
 
 ## Domain tasks:  
 Here is the list of questions that we would like to explore: 
@@ -41,18 +41,18 @@ Here is the list of questions that we would like to explore:
   - How does the suicidal rate relate to the economic situation?
   - Is age a good indicator of the suicidal rate?
   
- [ ]Here is the final three questions that we would like to answer with the vis: 
+ [ ] Here is the final three questions that we would like to answer with the vis: 
  
  
  
 
 ## Meeting Todo
 ### 11/15 (Fri)  meeting: 
-- [ ]Select 3 questions from the list to focus on 
-- [ ]Decide on the potential visual presentations of the tasks/ data
-- [ ]Number of visual & interaction
-- [ ]Find & set the texts based on the questions
-- [ ]Decide the layout (responsive?)
+- [ ] Select 3 questions from the list to focus on 
+- [ ] Decide on the potential visual presentations of the tasks/ data
+- [ ] Number of visual & interaction
+- [ ] Find & set the texts based on the questions
+- [ ] Decide the layout (responsive?)
  
 ### After 11/15 meeting: 
 - Start developement 
