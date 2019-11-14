@@ -41,7 +41,7 @@ Here is the list of questions that we would like to explore:
   - How does the suicidal rate relate to the economic situation?
   - Is age a good indicator of the suicidal rate?
   
- [ ] Here is the final three questions that we would like to answer with the vis: 
+- [ ] Here is the final three questions that we would like to answer with the vis: 
  
  
  
