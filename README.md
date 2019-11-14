@@ -58,6 +58,10 @@ Here is the list of questions that we would like to explore:
 - Start developement 
 
 
+## Time tracking
+11/5 - one hour to select a topic - changed again on 11/13
+11/13 - discussion time
+11/15 - 
 
 
 
