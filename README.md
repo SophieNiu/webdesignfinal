@@ -42,17 +42,21 @@ Here is the list of questions that we would like to explore:
   - Is age a good indicator of the suicidal rate?
   
 - [ ] Here is the final three questions that we would like to answer with the vis: 
+   1. What’s the relationship between continents and suicidal rate? 
+   2. How suicide rates change in different age groups?
+   3. What’s the relationship between gpd per capita and suicidal rate? 
+   4. What’s the relationship between gender and suicidal rate? 
  
  
  
 
 ## Meeting Todo
 ### 11/15 (Fri)  meeting: 
-- [ ] Select 3 questions from the list to focus on 
-- [ ] Decide on the potential visual presentations of the tasks/ data
-- [ ] Number of visual & interaction
+- [x] Select 3 questions from the list to focus on 
+- [x] Decide on the potential visual presentations of the tasks/ data
+- [x] Number of visual & interaction
 - [ ] Find & set the texts based on the questions
-- [ ] Decide the layout (responsive?)
+- [x] Decide the layout (responsive?)
  
 ### After 11/15 meeting: 
 - Start developement 
@@ -60,8 +64,8 @@ Here is the list of questions that we would like to explore:
 
 ## Time tracking
 11/5 - one hour to select a topic - changed again on 11/13
-11/13 - discussion time
-11/15 - 
+11/13 - one hour discussion time 
+11/15 - one and half hour discussion time
 
 
 
