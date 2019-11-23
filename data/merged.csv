@@ -1,4 +1,4 @@
-field1,field2,field2,field3,field4,field5,field6,field7,field8,field9,field10,field11,field12
+Continent,Country,Year,Sex,Age,Suicide_No,Population,Suicides/100K Pop,Country-Year,HDI,GDP($),GDP_Per_Capita($),Generation
 Africa,Mauritius,1985,female,15-24 years,18,106300,16.93,Mauritius1985,0.575,"1,080,642,033",1223,Generation X
 Africa,Mauritius,1985,female,25-34 years,6,87200,6.88,Mauritius1985,0.575,"1,080,642,033",1223,Boomers
 Africa,Mauritius,1985,female,35-54 years,6,90500,6.63,Mauritius1985,0.575,"1,080,642,033",1223,Silent
