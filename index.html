@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
     <title>Suicide Rates Overview 1985 to 2016</title>
   </head>
   <body>
@@ -41,9 +44,9 @@
         <p></p>
       </div>
 
-      <div class="gdp-d3"></div>
-      <div class="gdp text-block">
-        <a name="gdp"></a>
+      <div class="sex-d3"></div>
+      <div class="sex text-block">
+        <a name="sex"></a>
         <h2>What’s the relationship between GDP per capita and suicidal rate?</br>
         What’s the relationship between gender and suicidal rate?</h2>
         <p></p>
@@ -70,5 +73,11 @@ Suicide occurs in all regions of the world. In fact, 79% of global suicides happ
           &copy; Kefan Xu, Xiaoqian Niu, Yiqi Ye, 2019</p>
       </footer>
 </div>
+<script type="text/javascript">
+  let jsonSpec="data/visualization.vl.json";
+  vegaEmbed('#sex', jsonSpec,{theme: 'latimes',"renderer":"svg"}).then(function(result) {
+  }).catch(console.error);
+</script>
+
   </body>
 </html>
