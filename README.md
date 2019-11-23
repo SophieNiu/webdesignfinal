@@ -75,4 +75,39 @@ Here is the list of questions that we would like to explore:
 2. Area: https://www.d3-graph-gallery.com/graph/area_basic.html
 3. Streamgraph simple: http://bl.ocks.org/WillTurman/4631136 (possibly only need to use this one) 
 
+## Github
+4. checkout the master branch<br>
+```
+git checkout master
+git pull
+```
+Make sure you start from the master branch so that later on your branch is not merging on other's branch.`git pull` fetches all content from the master branch.  
+
+5. create new branch for editing<br>
+To **check which branch you are in right now**: ```git branch```<br>
+To create a new branch: ```git checkout -b new_branch_name```<br>
+Change new_branch_name to the name that you create for the branch. 
+
+6. switch to the new branch <br>
+Once the new branch is created, switch to the new branch before making changes to any code:<br>
+```git branch new_branch_name```
+
+7. make changes on the code from your text editor<br>
+For frontend, open up a browser, type in `localhost:3000` should open up the project page, and this will reflect the changes you made in the code. 
+
+8. merge code to the master<br>
+Once the code you have created can carry out the desired task, merge your branch to the master:<br>
+```
+git status
+git add .
+git commit -m `write a commit message to describe what you did` 
+git push -u origin new_branch_name
+```
+Once the task for the branch is completed, create a [pull request](https://www.atlassian.com/git/tutorials/making-a-pull-request) on github which asks other developers on the team to review and discuss your code. 
+
+`git status` shows how many files have been modified. <br>
+`git log` shows all the commits that happened in this repo, which helps to revert unwanted changes and track history. <br>
+`git add .` adds all changes to the commit. <br>
+`git push` pushes the local changes to the site.<br><br>
+For more git commands, see [Atlassian git glossary](https://www.atlassian.com/git/glossary).
 
