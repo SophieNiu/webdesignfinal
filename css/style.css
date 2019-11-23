@@ -99,10 +99,13 @@ header p{
 
 .text-block{
   align-self: center;
-  justfy-self: center;
+  justify-self: center;
   padding: 30px;
 }
 
+.conclusion{
+  text-align: center;
+}
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
