@@ -14,16 +14,16 @@
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <div class="container">
 
-    <div class="nav">
-      <nav>
-        <ul>
-          <li><a href="#continents">Suicide Rates by Continents</a></li>
-          <li><a href="#age">Suicide Rates by Age</a></li>
-          <li><a href="#gdp">Suicide Rates by GDP</a></li>
-          <li><a href="#conclusion">Conclusion</a></li>
-        </ul>
-      </nav>
-    </div>
+      <div class="nav">
+        <nav>
+          <ul>
+            <li><a href="#continents">Suicide Rates by Continents</a></li>
+            <li><a href="#age">Suicide Rates by Age</a></li>
+            <li><a href="#sex">Suicide Rates by GDP</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </nav>
+      </div>
 
       <header id="main">
       <h1>Suicide Current Issue</h1>
@@ -31,35 +31,29 @@
       </header>
 
       <div class="bubbleChart-d3"></div>
-      <div class="bubbleChart text-block">
-        <a name="bubbleChart"></a>
+      <div class="bubbleChart text-block" id = 'continents'>
         <h2>What’s the Suicide Overview in 2015</h2>
         <p> Explaniation</p>
       </div>
 
       <div class="age-d3"></div>
-      <div class="age text-block">
-        <a name="age"></a>
+      <div class="age text-block" id='age'>
         <h2>How suicide rates change in different age groups?</h2>
         <p></p>
       </div>
 
       <div class="sex-d3"></div>
       <div class="sex text-block" id ='sex'>
-        <a name="sex"></a>
         <h2>What’s the relationship between GDP per capita and suicidal rate?</br>
         What’s the relationship between gender and suicidal rate?</h2>
         <p></p>
       </div>
 
-      <div class="conclusion">
-        <a name="conclusion"></a>
+      <div class="conclusion" id ='conclusion'>
         <h2>Limitation</h2>
         <p>Data is limited...</p>
         <h2>Conclusion</h2>
-        <p> Close to 800 000 people die by suicide every year; that’s one person every 40 seconds. Suicide occurs throughout life. It is the second leading cause of death among 15-29 year-olds globally.
-
-Suicide occurs in all regions of the world. In fact, 79% of global suicides happen in low- and middle-income countries. </p>
+        <p> Close to 800 000 people die by suicide every year; that’s one person every 40 seconds. Suicide occurs throughout life. It is the second leading cause of death among 15-29 year-olds globally.<br/>Suicide occurs in all regions of the world. In fact, 79% of global suicides happen in low- and middle-income countries. </p>
         <h2>Reference</h2>
         <ul>
           <li></li>
@@ -68,16 +62,16 @@ Suicide occurs in all regions of the world. In fact, 79% of global suicides happ
           <li></li>
         </ul>
       </div>
+
       <footer>
         <p>University of Michigan School of Information <br/>
           &copy; Kefan Xu, Xiaoqian Niu, Yiqi Ye, 2019</p>
       </footer>
-</div>
-<script type="text/javascript">
-  let jsonSpec="data/visualization.vl.json";
-  vegaEmbed('#sex', jsonSpec,{theme: 'latimes',"renderer":"svg"}).then(function(result) {
-  }).catch(console.error);
-</script>
-
+    </div>
+    <script type="text/javascript">
+      let jsonSpec="data/visualization.vl.json";
+      vegaEmbed('#sex', jsonSpec,{theme: 'latimes',"renderer":"svg"}).then(function(result) {
+      }).catch(console.error);
+    </script>
   </body>
 </html>
