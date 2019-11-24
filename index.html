@@ -31,20 +31,23 @@
       </header>
       <div id="innerChart-overview"></div>
       <div class="bubbleChart-d3"></div>
-      <div class="bubbleChart text-block" id = 'continents'>
+      <div class="ageChart text-block" id = 'continents'>
         <h2>What’s the Suicide Overview in 2015</h2>
         <p> Explaniation</p>
       </div>
-      <div id="innerChart-age"></div>
+      <div id="innerChart-age"> 
+      <iframe id="innerChart-age" src="https://kefanxu.github.io/age2/" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:500px;width:100%;margin: auto;border:none;overflow:hidden;"></iframe>
+    </div>
 
-      <div class="age-d3"></div>
-      <div class="age text-block" id='age'>
+
+      <!-- <div class="age-d3"></div> -->
+      <div class="ageChart" id='age'>
         <h2>How suicide rates change in different age groups?</h2>
         <p></p>
       </div>
 
-      <div class="sex-d3"></div>
-      <div class="sex text-block" id ='sex'>
+      <div class="sex-d3" id="sex"></div>
+      <div class="sex text-block">
         <h2>What’s the relationship between GDP per capita and suicidal rate?</br>
         What’s the relationship between gender and suicidal rate?</h2>
         <p></p>
@@ -77,10 +80,10 @@
       let jsonSpec="data/visualization.vl.json";
       vegaEmbed('#sex', jsonSpec,{theme: 'latimes',"renderer":"svg"}).then(function(result) {
       }).catch(console.error);
-      d3version4 = d3
+      
       $(function(){
         $("#innerChart-overview").load("bubble.html"); 
-        $("#innerChart-age").html('<object data="https://kefanxu.github.io/age2/"/>');
+        // $("#innerChart-age").html('<object data="https://kefanxu.github.io/age2/"/>');
       });
       
     </script>
