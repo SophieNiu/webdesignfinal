@@ -58,13 +58,13 @@ nav a:hover{
   top: 0px;
 }
 
-a:hover{
+/* a:hover{
   border: 2px solid black;
-}
-:focus{
+} */
+/* :focus{
   outline: none;
   border: 2px solid black;
-}
+} */
 
 
 footer{
@@ -87,7 +87,7 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  height: 400px;
+  height: 200px;
 }
 
 header p{
@@ -101,6 +101,28 @@ header p{
   align-self: center;
   justify-self: center;
   padding: 30px;
+}
+.bubbleChart{
+  margin: auto;
+  width: 50%;
+}
+#innerChart-age{
+  margin: auto;
+  width: 50%;
+}
+.ageChart{
+  margin: auto;
+  width: 50%;
+}
+.sex-d3{
+  height: 200px;
+  width: 200px;
+  left: 50%;
+  right: 50%;
+}
+object{
+  width: 1000px;
+  height: 500px;
 }
 
 .conclusion{
