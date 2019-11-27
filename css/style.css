@@ -1,129 +1,131 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
-  background-color: white;
-  font-family: avenirnextltpro-regular,helvetica,arial,sans-serif;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
+body {
+    background-color: white;
+    font-family: avenirnextltpro-regular, helvetica, arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-  font-size: 20px;
-  line-height: 1;
-  padding: 50px 0;
-  text-align: center;
-  color: black;
+h1 {
+    font-size: 20px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
+    color: black;
 }
 
-h2{
-  font-size: 18px;
-  line-height: 1.5;
+h2 {
+    font-size: 18px;
+    line-height: 1.5;
 }
 
-nav ul{
-  list-style-type: none;
+nav ul {
+    list-style-type: none;
 }
 
-nav li{
-  display: inline;
-  padding-right: 20px;
-  text-decoration: none;
+nav li {
+    display: inline;
+    padding-right: 20px;
+    text-decoration: none;
 }
 
-nav a{
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
+nav a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-nav a:hover{
-  text-decoration: underline;
+nav a:hover {
+    text-decoration: underline;
 }
 
-.skip a{
-  background: white;
-  left: 0;
-  padding: 6px;
-  position: absolute;
-  top: -40px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
-}
-
-.skip a:focus {
-  top: 0px;
-}
-
-a:hover{
-  border: 2px solid black;
-}
-:focus{
-  outline: none;
-  border: 2px solid black;
-}
-
-
-footer{
-  background-color: black;
-  color: white;
-  padding-top: 30px;
-  text-align: center;
-}
-
-
-.nav{
-  background-color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-header{
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  height: 400px;
-}
-
-header p{
-  color: black;
-  font-size: 16px;
-  padding: 0 100px;
-  text-align: center;
-}
-
-.text-block{
-  align-self: center;
-  justify-self: center;
-  padding: 30px;
-}
-
-.conclusion{
-  text-align: center;
-}
-
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: auto;
-  }
-
-  .skip a{
+.skip a {
     background: white;
     left: 0;
     padding: 6px;
     position: absolute;
     top: -40px;
-    -webkit-transition: initial;
-    transition: initial;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
     z-index: 1;
-  }
+}
 
-  .skip a:focus{
-    top:0;
-  }
+.skip a:focus {
+    top: 0px;
+}
+
+a:hover {
+    border: 2px solid black;
+}
+:focus {
+    outline: none;
+    border: 2px solid black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.nav {
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 400px;
+}
+
+header p {
+    color: black;
+    font-size: 16px;
+    padding: 0 100px;
+    text-align: center;
+}
+
+.text-block {
+    align-self: center;
+    justify-self: center;
+    padding: 30px;
+}
+
+.conclusion {
+    text-align: center;
+}
+
+#sex {
+    align-content: center;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .skip a {
+        background: white;
+        left: 0;
+        padding: 6px;
+        position: absolute;
+        top: -40px;
+        -webkit-transition: initial;
+        transition: initial;
+        z-index: 1;
+    }
+
+    .skip a:focus {
+        top: 0;
+    }
 }

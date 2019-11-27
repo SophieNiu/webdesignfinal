@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Continent Suicidal Correlation</title>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://npmcdn.com/simple-statistics@2.0.0/dist/simple-statistics.min.js"></script>
 
 <style>
@@ -72,7 +72,9 @@
         // Life expectancy, poverty rate, and region for all 50 United States.  Data
         // is also provided for the District of Columbia.  We therefore have 51 items
         // in the data array.
-        var data_1 = ''
+        d3.csv("data/data_shrink.csv").then(function(data) {
+            console.log(data[0]);
+        });
         var data = [
             {state:"Alabama",life_expectancy:75.4,poverty_rate:22,region:"South"},
             {state:"Alaska",life_expectancy:78.3,poverty_rate:21,region:"Other"},
