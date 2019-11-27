@@ -38,7 +38,7 @@ button {
 
 <script>
 
-chart("age.csv", "orange");
+chart("age.csv", "pink");
 
 var datearray = [];
 var colorrange = [];
@@ -114,6 +114,8 @@ var svg = d3.select(".chart").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var graph = d3.csv(csvpath, function(data) {
+  var year = data[2]
+  console.log(year)
   data.forEach(function(d) {
     d.date = d.date;
     d.value = +d.value;
@@ -165,7 +167,7 @@ var graph = d3.csv(csvpath, function(data) {
         datearray[k] = selected[k].date
         // datearray[k] = datearray[k].getMonth() + datearray[k].getDate();
       }
-
+      console.log(d)
       // mousedate = datearray.indexOf(invertedx);
       // pro = d.values[mousedate].value;
 
@@ -173,7 +175,7 @@ var graph = d3.csv(csvpath, function(data) {
       .classed("hover", true)
       .attr("stroke", strokecolor)
       .attr("stroke-width", "0.5px"), 
-      tooltip.html( "<p>" + d.key + "<br>" + "</p>" ).style("visibility", "visible");
+      tooltip.html( "<p>" + d.key + "<br>" + d.values.key + "</p>" ).style("visibility", "visible");
       
     })
     .on("mouseout", function(d, i) {
