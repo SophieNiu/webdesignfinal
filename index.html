@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Libre+Baskerville|Marmelad|Monoton|Prata&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
@@ -14,7 +15,7 @@
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <div class="container">
 
-      <div class="nav">
+      <div class="navigation">
         <nav>
           <ul>
             <li><a href="#continents">Suicide Rates by Continents</a></li>
@@ -27,8 +28,26 @@
 
       <header id="main">
       <h1>Suicide Current Issue</h1>
-      <p>Close to 800 000 people die by suicide every year according to World Health Orgnization (WHO). That is one person per 40 seconds. WHO in 2016 recognizes suicide as a public health priority. However, Suicides are preventable. Much can be done to prevent suicide at individual, community and national levels. </p>
+      <p>On October 14, 2019, there was a message blew the whole internet. Sulli, one of the famous K-Pop celebrities died by suicide. Many were shocked. Many miss her today. 
+      </p>
+      <br>
+      <p>
+        One month and ten days later, Goo Hara, a 28-year-old K-Pop Star, was also found died in her home. Police did not disclose the reason for death. However, we know that Hara has attempted to kill herself in May 2019.
+      </p>
+      <br>
+      <p>
+        Suicide happens certainly not just among celebrities, it happens ubiquitously in terms of age groups, genders, countries. According to the World Health Organization (WHO), there are about <span style="color:#f43e06; font-weight: bold;">800,000</span> people die by suicide every year, which is about one person per <span style="color:#eb3c70; font-weight: bold;">40 seconds</span>. 
+      </p>
+      <br>
+      <p>
+        Also, about every committed suicide, there is an average of <span style="color:#12a182; font-weight: bold;">20 attempts</span>. 
+      </p>
+      <br>
+      <p>
+        Suicide is a public issue. We would like to find the relationship between suicide rates with age groups, genders, and countries based on analyzing the suicide data we got from the WHO.
+         </p>
       </header>
+      <h2 style="text-align: center;">An Overview</h2>
       <div id="innerChart-overview"></div>
       <div class="bubbleChart-d3"></div>
       <br>
@@ -41,43 +60,71 @@
       <br>
       <br>
       <br>
+      <h3>Key Findings</h3>
       <div class="finding_image_one">
         <img src="data/fing1.png">
+        <p>
+         From the graph abrove, we can conclude several common characters in this data:
+          <ul>
+            <li>The <span style="color:#eb3c70; font-weight: bold;">male </span>people live in <span style="color:#12a182; font-weight: bold;">Russia</span>, aged <span style="color:#f43e06; font-weight: bold;">35-54 </span>have the highest risk of committing  suicide.</li>
+            <li>There is a large amount of people committed suicide at their <span style="color:#346c9c; font-weight: bold;">35-54.</span></li>
+            <li>There is a much more <span style="color:#eb3c70; font-weight: bold;">male </span> committed suicide than female in 2016</li>
+          </ul>
+        </p>
       </div>
-      <div class="ageChart text-block" id = 'continents'>
-        <h2>What’s the Suicide Overview in 2015</h2>
-        <p> Explaniation</p>
+      <h3 id="closeLook">Let's take a close look</h3>
+      <div class="age_year" id = 'age_year'>
+        <h2 style="text-align: center;">Age-Year</h2>
+        
       </div>
       <div id="innerChart-age"> 
       <iframe id="innerChart-age" src="https://kefanxu.github.io/age2/" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:500px;width:100%;margin: auto;border:none;overflow:hidden;"></iframe>
+      <p>
+        According to the global data, starting from the year of XXXX, the suicide number increased among all age groups. During the whole time period, a larger number of suicides were committed within the 35-54-year-old group, closely followed by people 55-74-year-old. People 5-14 and 75+ are less likely to die of suicide.
+      </p>
     </div>
 
 
       <!-- <div class="age-d3"></div> -->
       <div class="ageChart" id='age'>
-        <h2>How suicide rates change in different age groups?</h2>
         <p></p>
       </div>
-
+      <br>
+      <h2 style="text-align: center;">Gender-Continent:
+      </h2>
+      <br>
+      <div id="sexd3">
       <div class="sex-d3" id="sex"></div>
-      <div class="sex text-block">
-        <h2>What’s the relationship between GDP per capita and suicidal rate?</br>
-        What’s the relationship between gender and suicidal rate?</h2>
-        <p></p>
       </div>
+      <br>
+      <div class="Gender-Continent">
+        <p>Among all the regions, Europe has the highest suicide rate, while Africa and North America have the lowest suicide rates. Comparing between females and male. Male in all continents has triple to quadruple of the average suicide rate than female.
 
+        </p>
+      </div>
+      <h2>Conclusion</h2>
       <div class="conclusion" id ='conclusion'>
-        <h2>Limitation</h2>
-        <p>Data is limited...</p>
-        <h2>Conclusion</h2>
-        <p> Close to 800 000 people die by suicide every year; that’s one person every 40 seconds. Suicide occurs throughout life. It is the second leading cause of death among 15-29 year-olds globally.<br/>Suicide occurs in all regions of the world. In fact, 79% of global suicides happen in low- and middle-income countries. </p>
-        <h2>Reference</h2>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+        
+        <p> Overall, we found that male in the age of 35 to 54, who lives in Europe has the largest potential to commit suicide.
+          There are also limitations in our conclusion: our dataset only collected observations from 1985 to 2016, which is not up-to-date; also, for continents like Asia, we were not able to obtain data from three countries, so the observation may be biased. 
+          <br>
+          <br>
+          It is difficult to live as an adult in the world. We have to face many issues, challenges, and downtimes. However, death should not be a way to fix any of these issues. Instead, being alive is the only way we could find solutions out. Fortunately, suicide is preventable. Here, we appeal that if you find yourself or any of your friends have an idea of committing suicide, plan on committing suicide or take action to commit suicide, please never make fun of them and give them your help ASAP. 
+          <br>
+          <br>
+          How to get help: In the US, call the National Suicide Prevention Lifeline at 1-800-273-8255. The International Association for Suicide Prevention and Befrienders Worldwide also provide contact information for crisis centers around the world. (Reference: cnn.com)</p>
+        
+        
+      </div>
+      <h2>Reference</h2>
+      <div id="reference">
+          <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+
       </div>
 
       <footer>
