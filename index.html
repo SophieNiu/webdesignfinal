@@ -18,10 +18,11 @@
       <div class="navigation">
         <nav>
           <ul>
-            <li><a href="#continents">Suicide Rates by Continents</a></li>
-            <li><a href="#age">Suicide Rates by Age</a></li>
-            <li><a href="#sex">Suicide Rates by GDP</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#main">Intro</a></li>
+            <li><a href="#innerChart-overview">Overview</a></li>
+            <li><a href="#age_year">Suicide Rates by Age</a></li>
+            <li><a href="#gender">Suicide Rates by Gender</a></li>
+            <li><a href="#conclusion_title">Conclusion</a></li>
           </ul>
         </nav>
       </div>
@@ -78,7 +79,7 @@
         
       </div>
       <div id="innerChart-age"> 
-      <iframe id="innerChart-age" src="https://kefanxu.github.io/age2/" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:500px;width:100%;margin: auto;border:none;overflow:hidden;"></iframe>
+      <center><iframe id="innerChart-age" src="https://kefanxu.github.io/age2/" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:500px;width:100%;margin: auto;border:none;overflow:hidden;"></iframe></center>
       <p>
         According to the global data, starting from the year of XXXX, the suicide number increased among all age groups. During the whole time period, a larger number of suicides were committed within the 35-54-year-old group, closely followed by people 55-74-year-old. People 5-14 and 75+ are less likely to die of suicide.
       </p>
@@ -90,7 +91,7 @@
         <p></p>
       </div>
       <br>
-      <h2 style="text-align: center;">Gender-Continent:
+      <h2 id="gender" style="text-align: center;">Gender-Continent:
       </h2>
       <br>
       <div id="sexd3">
@@ -102,17 +103,18 @@
 
         </p>
       </div>
-      <h2>Conclusion</h2>
+      <h2 id="conclusion_title">Conclusion</h2>
       <div class="conclusion" id ='conclusion'>
         
-        <p> Overall, we found that male in the age of 35 to 54, who lives in Europe has the largest potential to commit suicide.
-          There are also limitations in our conclusion: our dataset only collected observations from 1985 to 2016, which is not up-to-date; also, for continents like Asia, we were not able to obtain data from three countries, so the observation may be biased. 
+        <p> Overall, we found that male in the age of <span style="color:#f43e06; font-weight: bold;">35 to 54</span>, who lives in <span style="color:#12a182; font-weight: bold;">Europe </span>has the largest potential to commit suicide.
+          There are also limitations in our conclusion: our dataset only collected observations from <span style="color:#bec936; font-weight: bold;">1985 to 2016</span>, which is not up-to-date; also, for continents like Asia, we were not able to obtain data from three countries, so the observation may be biased. 
           <br>
           <br>
           It is difficult to live as an adult in the world. We have to face many issues, challenges, and downtimes. However, death should not be a way to fix any of these issues. Instead, being alive is the only way we could find solutions out. Fortunately, suicide is preventable. Here, we appeal that if you find yourself or any of your friends have an idea of committing suicide, plan on committing suicide or take action to commit suicide, please never make fun of them and give them your help ASAP. 
           <br>
           <br>
-          How to get help: In the US, call the National Suicide Prevention Lifeline at 1-800-273-8255. The International Association for Suicide Prevention and Befrienders Worldwide also provide contact information for crisis centers around the world. (Reference: cnn.com)</p>
+          <span style=" font-weight: 1000;">
+          How to get help: In the US, call the National Suicide Prevention Lifeline at <span style="color:#82111f;">1-800-273-8255</span>. The International Association for Suicide Prevention and Befrienders Worldwide also provide contact information for crisis centers around the world. (Reference: cnn.com)</span></p>
         
         
       </div>
@@ -136,6 +138,8 @@
     
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://npmcdn.com/simple-statistics@2.0.0/dist/simple-statistics.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
     <script type="text/javascript">
       let jsonSpec="data/visualization.vl.json";
       vegaEmbed('#sex', jsonSpec,{theme: 'latimes',"renderer":"svg"}).then(function(result) {

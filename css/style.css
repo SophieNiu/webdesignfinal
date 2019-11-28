@@ -1,5 +1,6 @@
 html{
-    scroll-behavior: smooth;
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -13,14 +14,13 @@ body{
 header{
   width: 60%;
   margin: 0 auto;
-  padding-bottom: 700px;
-  
-  
+  padding-bottom: 500px;
 }
 #main h1{
   font-size: 60px;
   line-height: 1;
   padding: 50px 0;
+  padding-top: 100px;
   text-align: left;
   color: black;
   font-weight: bold;
@@ -28,8 +28,8 @@ header{
 }
 #main p {
   text-align: left;
-  line-height:40px;
-  font-size: 25px;
+  line-height:30px;
+  font-size: 20px;
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
 }
@@ -58,7 +58,7 @@ h3{
 }
 .finding_image_one p{
   text-align: left;
-  line-height:40px;
+  line-height:30px;
   font-size: 20px;
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
@@ -66,7 +66,7 @@ h3{
 }
 .finding_image_one ul li{
   text-align: left;
-  line-height:40px;
+  line-height:30px;
   font-size: 20px;
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
@@ -84,7 +84,7 @@ h3{
 }
 #innerChart-age p{
   text-align: left;
-  line-height:40px;
+  line-height:30px;
   font-size: 20px;
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
@@ -95,7 +95,7 @@ h3{
 }
 .Gender-Continent p{
   text-align: left;
-  line-height:40px;
+  line-height:30px;
   font-size: 20px;
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
@@ -107,36 +107,51 @@ h3{
 }
 .conclusion p{
   text-align: left;
-  line-height:40px;
+  line-height:30px;
   font-size: 20px;
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
 }
 .navigation{
-  background-color: black;
-  color: white;
-  padding: 10px 0;
+  position: fixed;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding: 0px;
+  color: black;
+  /* background: blanchedalmond; */
+  -webkit-backdrop-filter: blur(10px);
   text-align: center;
-  background-color: black;
+  border-bottom-color: tomato;
+  
 }
 .navigation ul{
+  padding: 10px;
+  top:0;
+  bottom: 0;
   list-style-type: none;
+
+  
 }
 
 .navigation li{
   display: inline;
-  padding: 20px;
+  padding: 30px;
   text-decoration: none;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .navigation a{
-  color: white;
+  margin: 25px;
+  color: black;
   font-weight: bold;
   text-decoration: none;
 }
 
 .navigation a:hover{
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color:#f43e06;
 }
 
 .skip a{
@@ -166,8 +181,9 @@ h3{
 footer{
   background-color: black;
   color: white;
-  padding-top: 30px;
+  padding:15px;
   text-align: center;
+  font-family: 'Libre Baskerville', serif;
 }
 
 
@@ -179,7 +195,11 @@ footer{
   width: 60%;
   margin: 0 auto;
 }
-
+#reference{
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
 header{
   background-attachment: fixed;
   background-position: center;
