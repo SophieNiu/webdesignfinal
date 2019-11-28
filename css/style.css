@@ -37,7 +37,7 @@ header{
 h2{
   width: 60%;
   margin: 0 auto;
-  font-size: 40px;
+  font-size: 25px;
   line-height: 1;
   padding: 50px 0;
   text-align: left;
@@ -110,6 +110,17 @@ h3{
   line-height:30px;
   font-size: 20px;
   padding: 0px;
+  font-family: 'Libre Baskerville', serif;
+}
+#conclusion_title{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 30px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: left;
+  color: black;
+  font-weight: bold;
   font-family: 'Libre Baskerville', serif;
 }
 .navigation{
@@ -199,6 +210,9 @@ footer{
   width: 60%;
   margin: 0 auto;
   margin-bottom: 30px;
+}
+#reference li{ 
+  font-family: 'Libre Baskerville', serif;
 }
 header{
   background-attachment: fixed;
