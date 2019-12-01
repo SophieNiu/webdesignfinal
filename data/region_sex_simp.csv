@@ -1,0 +1,13 @@
+region,sex,suicidal_rate
+Africa,female,0.51
+Africa,male,1.85
+Asia,female,6.11
+Asia,male,21.62
+Europe,female,5.3
+Europe,male,18.82
+North America,female,2.4
+North America,male,9.32
+Oceania,female,6.56
+Oceania,male,20.76
+South America,female,2.7
+South America,male,10.44
