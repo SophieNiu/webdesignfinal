@@ -85,6 +85,32 @@ h1 {
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
 }
+<<<<<<< HEAD
+=======
+#closeLook{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 30px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+#innerChart-age{
+  width: 60%;
+  margin: 0 auto;
+}
+#innerChart-age p{
+  text-align: left;
+
+  line-height:30px;
+  font-size: 20px;
+  padding: 0px;
+  font-family: 'Libre Baskerville', serif;
+}
+>>>>>>> parent of b61f8df... Merge pull request #15 from SophieNiu/continent_vis
 .Gender-Continent{
   width: 60%;
   margin: 0 auto;
@@ -168,12 +194,16 @@ a:hover {
     border: 2px solid black;
 }
 
+<<<<<<< HEAD
 footer {
     background-color: black;
     color: white;
     padding-top: 30px;
     text-align: center;
 }
+=======
+
+>>>>>>> parent of b61f8df... Merge pull request #15 from SophieNiu/continent_vis
 
 
 
@@ -197,6 +227,7 @@ footer {
 }
 #reference li{ 
   font-family: 'Libre Baskerville', serif;
+<<<<<<< HEAD
 =======
 header {
     background-attachment: fixed;
@@ -213,6 +244,30 @@ header p {
     font-size: 16px;
     padding: 0 100px;
     text-align: center;
+=======
+}
+header{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 200px;
+  /* padding-bottom: 400px; */
+}
+
+header p{
+  color: black;
+  font-size: 16px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.text-block{
+  align-self: center;
+  justify-self: center;
+  padding: 30px;
+>>>>>>> parent of b61f8df... Merge pull request #15 from SophieNiu/continent_vis
 }
 
 header p{
