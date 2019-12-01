@@ -1,6 +1,7 @@
 html{
   --scroll-behavior: smooth;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 body{
@@ -213,9 +214,9 @@ footer{
   margin: 0 auto;
 }
 #age-year-img{
-  width: 95%;
+  width: 85%;
   margin-left: 20px;
-  margin-top: -160px;
+  margin-top: -190px;
 }
 #reference{
   width: 60%;
