@@ -48,7 +48,7 @@ var BUBBLE_PARAMETERS = {
             "data_field": "age"
         },
         {
-            "button_text": "Gender",
+            "button_text": "Sex",
             "button_id": "Change",
             "type": "grid",
             "labels": ["female", "male"],
