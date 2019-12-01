@@ -266,9 +266,10 @@ header p{
   width: 60%;
   margin: 0 auto;
 }
-object{
+object{ 
   width: 1000px;
   height: 500px;
+  
 }  
 
 .conclusion{
