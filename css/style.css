@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html{
   --scroll-behavior: smooth;
   scroll-behavior: smooth;
@@ -56,40 +57,29 @@ h3{
   color: black;
   font-weight: bold;
   font-family: 'Libre Baskerville', serif;
+=======
+html {
+    scroll-behavior: smooth;
 }
-.finding_image_one p{
-  text-align: left;
-  line-height:30px;
-  font-size: 20px;
-  padding: 0px;
-  font-family: 'Libre Baskerville', serif;
 
+body {
+    background-color: white;
+    font-family: avenirnextltpro-regular, helvetica, arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+>>>>>>> parent of 4492d1b... Merge branch 'master' into continent_vis
 }
-.finding_image_one ul li{
-  text-align: left;
-  line-height:30px;
-  font-size: 20px;
-  padding: 0px;
-  font-family: 'Libre Baskerville', serif;
-}
-#closeLook{
-  width: 60%;
-  margin: 0 auto;
-  font-size: 30px;
-  line-height: 1;
-  padding: 50px 0;
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  font-family: 'Libre Baskerville', serif;
-}
-#innerChart-age{
-  width: 60%;
-  margin: 0 auto;
-}
-#innerChart-age p{
-  text-align: left;
 
+h1 {
+    font-size: 20px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
+    color: black;
+}
+
+<<<<<<< HEAD
   line-height:30px;
   font-size: 20px;
   padding: 0px;
@@ -128,47 +118,31 @@ h3{
   color: black;
   font-weight: bold;
   font-family: 'Libre Baskerville', serif;
-}
-.navigation{
-  position: fixed;
-  margin: 0px auto;
-  left: 0;
-  right: 0;
-  height: 40px;
-  padding: 0px;
-  color: black;
-  /* background: blanchedalmond; */
-  -webkit-backdrop-filter: blur(10px);
-  text-align: center;
-  border-bottom-color: tomato;
-  
-}
-.navigation ul{
-  padding: 10px;
-  top:0;
-  bottom: 0;
-  list-style-type: none;
-
-  
+=======
+h2 {
+    font-size: 18px;
+    line-height: 1.5;
+>>>>>>> parent of 4492d1b... Merge branch 'master' into continent_vis
 }
 
-.navigation li{
-  display: inline;
-  padding: 30px;
-  text-decoration: none;
-  font-family: 'Libre Baskerville', serif;
+nav ul {
+    list-style-type: none;
 }
 
-.navigation a{
-  margin: 25px;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
+nav li {
+    display: inline;
+    padding-right: 20px;
+    text-decoration: none;
 }
 
-.navigation a:hover{
-  /* text-decoration: underline; */
-  color:#f43e06;
+nav a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 .skip a{
@@ -186,26 +160,24 @@ h3{
   top: 0px;
 }
 
-/* a:hover{
-  border: 2px solid black;
-} */
-/* :focus{
-  outline: none;
-  border: 2px solid black;
-} */
+a:hover {
+    border: 2px solid black;
+}
+:focus {
+    outline: none;
+    border: 2px solid black;
+}
 
-
-footer{
-  background-color: black;
-  width: 100%;
-  color: white;
-  padding:15px;
-  text-align: center;
-  font-family: 'Libre Baskerville', serif;
+footer {
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
 }
 
 
 
+<<<<<<< HEAD
 .finding_image_one img{
   width: 800px;
 }
@@ -225,15 +197,22 @@ footer{
 }
 #reference li{ 
   font-family: 'Libre Baskerville', serif;
+=======
+header {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 400px;
+>>>>>>> parent of 4492d1b... Merge branch 'master' into continent_vis
 }
-header{
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  height: 200px;
-  /* padding-bottom: 400px; */
+
+header p {
+    color: black;
+    font-size: 16px;
+    padding: 0 100px;
+    text-align: center;
 }
 
 header p{
@@ -247,28 +226,6 @@ header p{
   align-self: center;
   justify-self: center;
   padding: 30px;
-}
-.bubbleChart{
-  margin: auto;
-  width: 60%;
-}
-#innerChart-age{
-  margin: auto;
-  width: 60%;
-}
-.ageChart{
-  margin: auto;
-  width: 60%;
-}
-#sexd3{
-
-  height: 200px;
-  width: 60%;
-  margin: 0 auto;
-}
-object{
-  width: 1000px;
-  height: 500px;
 }
 
 .conclusion{

@@ -14,6 +14,7 @@
   "mark": "bar",
   "encoding": {
     "color": {
+<<<<<<< HEAD
       "condition": {
         "type": "nominal",
         "field": "sex",
@@ -33,6 +34,10 @@
         "selection": "selector012"
       },
       "value": "lightgray"
+=======
+      "type": "nominal",
+      "field": "sex"
+>>>>>>> parent of 4492d1b... Merge branch 'master' into continent_vis
     },
     "tooltip": [
       {
@@ -50,20 +55,22 @@
     ],
     "x": {
       "type": "quantitative",
+<<<<<<< HEAD
       "axis": {
         "tickMinStep": 4,
         "title": "Average Suicidal Rate (per 100k population)"
       },
       "field": "suicidal_rate"
+=======
+      "field": "mean_sui"
+>>>>>>> parent of 4492d1b... Merge branch 'master' into continent_vis
     },
     "y": {
       "type": "nominal",
-      "axis": {
-        "title": "Region"
-      },
       "field": "region"
     }
   },
+<<<<<<< HEAD
   "selection": {
     "selector012": {
       "type": "single",
@@ -74,6 +81,23 @@
       "empty": "all"
     }
   },
+=======
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "suicides/100k pop",
+          "as": "mean_sui"
+        }
+      ],
+      "groupby": [
+        "region",
+        "sex"
+      ]
+    }
+  ],
+>>>>>>> parent of 4492d1b... Merge branch 'master' into continent_vis
   "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json",
   "datasets": {
     "data-42a7afd694ff3e6433cf3f38a9e40f02": [
