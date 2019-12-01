@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 html{
   --scroll-behavior: smooth;
   scroll-behavior: smooth;
@@ -57,36 +56,22 @@ h3{
   color: black;
   font-weight: bold;
   font-family: 'Libre Baskerville', serif;
-=======
-html {
-    scroll-behavior: smooth;
 }
+.finding_image_one p{
+  text-align: left;
+  line-height:30px;
+  font-size: 20px;
+  padding: 0px;
+  font-family: 'Libre Baskerville', serif;
 
-body {
-    background-color: white;
-    font-family: avenirnextltpro-regular, helvetica, arial, sans-serif;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
->>>>>>> parent of 4492d1b... Merge branch 'master' into continent_vis
 }
-
-h1 {
-    font-size: 20px;
-    line-height: 1;
-    padding: 50px 0;
-    text-align: center;
-    color: black;
-}
-
-<<<<<<< HEAD
+.finding_image_one ul li{
+  text-align: left;
   line-height:30px;
   font-size: 20px;
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
 }
-<<<<<<< HEAD
-=======
 #closeLook{
   width: 60%;
   margin: 0 auto;
@@ -110,7 +95,6 @@ h1 {
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
 }
->>>>>>> parent of b61f8df... Merge pull request #15 from SophieNiu/continent_vis
 .Gender-Continent{
   width: 60%;
   margin: 0 auto;
@@ -144,31 +128,47 @@ h1 {
   color: black;
   font-weight: bold;
   font-family: 'Libre Baskerville', serif;
-=======
-h2 {
-    font-size: 18px;
-    line-height: 1.5;
->>>>>>> parent of 4492d1b... Merge branch 'master' into continent_vis
+}
+.navigation{
+  position: fixed;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding: 0px;
+  color: black;
+  /* background: blanchedalmond; */
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  border-bottom-color: tomato;
+  
+}
+.navigation ul{
+  padding: 10px;
+  top:0;
+  bottom: 0;
+  list-style-type: none;
+
+  
 }
 
-nav ul {
-    list-style-type: none;
+.navigation li{
+  display: inline;
+  padding: 30px;
+  text-decoration: none;
+  font-family: 'Libre Baskerville', serif;
 }
 
-nav li {
-    display: inline;
-    padding-right: 20px;
-    text-decoration: none;
+.navigation a{
+  margin: 25px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-nav a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
+.navigation a:hover{
+  /* text-decoration: underline; */
+  color:#f43e06;
 }
 
 .skip a{
@@ -186,28 +186,26 @@ nav a:hover {
   top: 0px;
 }
 
-a:hover {
-    border: 2px solid black;
+/* a:hover{
+  border: 2px solid black;
+} */
+/* :focus{
+  outline: none;
+  border: 2px solid black;
+} */
+
+
+footer{
+  background-color: black;
+  width: 100%;
+  color: white;
+  padding:15px;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
 }
-:focus {
-    outline: none;
-    border: 2px solid black;
-}
-
-<<<<<<< HEAD
-footer {
-    background-color: black;
-    color: white;
-    padding-top: 30px;
-    text-align: center;
-}
-=======
-
->>>>>>> parent of b61f8df... Merge pull request #15 from SophieNiu/continent_vis
 
 
 
-<<<<<<< HEAD
 .finding_image_one img{
   width: 800px;
 }
@@ -227,24 +225,6 @@ footer {
 }
 #reference li{ 
   font-family: 'Libre Baskerville', serif;
-<<<<<<< HEAD
-=======
-header {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    height: 400px;
->>>>>>> parent of 4492d1b... Merge branch 'master' into continent_vis
-}
-
-header p {
-    color: black;
-    font-size: 16px;
-    padding: 0 100px;
-    text-align: center;
-=======
 }
 header{
   background-attachment: fixed;
@@ -267,20 +247,28 @@ header p{
   align-self: center;
   justify-self: center;
   padding: 30px;
->>>>>>> parent of b61f8df... Merge pull request #15 from SophieNiu/continent_vis
 }
-
-header p{
-  color: black;
-  font-size: 16px;
-  padding: 0 100px;
-  text-align: center;
+.bubbleChart{
+  margin: auto;
+  width: 60%;
 }
+#innerChart-age{
+  margin: auto;
+  width: 60%;
+}
+.ageChart{
+  margin: auto;
+  width: 60%;
+}
+#sexd3{
 
-.text-block{
-  align-self: center;
-  justify-self: center;
-  padding: 30px;
+  height: 200px;
+  width: 60%;
+  margin: 0 auto;
+}
+object{
+  width: 1000px;
+  height: 500px;
 }
 
 .conclusion{
