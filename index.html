@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Libre+Baskerville|Marmelad|Monoton|Prata&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
@@ -14,70 +15,157 @@
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <div class="container">
 
-    <div class="nav">
-      <nav>
-        <ul>
-          <li><a href="#continents">Suicide Rates by Continents</a></li>
-          <li><a href="#age">Suicide Rates by Age</a></li>
-          <li><a href="#gdp">Suicide Rates by GDP</a></li>
-          <li><a href="#conclusion">Conclusion</a></li>
-        </ul>
-      </nav>
-    </div>
+      <div class="navigation">
+        <nav>
+          <ul>
+            <li><a href="#main">Intro</a></li>
+            <li><a href="#innerChart-overview">Overview</a></li>
+            <li><a href="#age_year">Suicide Rates by Age</a></li>
+            <li><a href="#gender">Suicide Rates by Gender</a></li>
+            <li><a href="#conclusion_title">Conclusion</a></li>
+          </ul>
+        </nav>
+      </div>
 
       <header id="main">
       <h1>Suicide Current Issue</h1>
-      <p>Close to 800 000 people die by suicide every year according to World Health Orgnization (WHO). That is one person per 40 seconds. WHO in 2016 recognizes suicide as a public health priority. However, Suicides are preventable. Much can be done to prevent suicide at individual, community and national levels. </p>
+      <p>On October 14, 2019, there was a message blew the whole internet. Sulli, one of the famous K-Pop celebrities committed suicide. Many were shocked. Many miss her today. 
+      </p>
+      <br>
+      <p>
+        One month and ten days later, Goo Hara, a 28-year-old K-Pop Star who is a good friend of Sulli, was also found dead in her home. After several days of investigation, Police decalred her death cause as suicide. 
+      </p>
+      <br>
+      <p>
+        Suicide happens certainly not just among celebrities, it happens ubiquitously in terms of age groups, genders, countries. According to the <a href="https://www.who.int/health-topics/suicide#tab=tab_1" style ="color: black">World Health Organization (WHO)</a>, there are about <span style="color:#f43e06; font-weight: bold;">800,000</span> people die by suicide every year, which is about one person per <span style="color:#eb3c70; font-weight: bold;">40 seconds</span>. 
+      </p>
+      <br>
+      <p>
+        Also, about every committed suicide, there is an average of <span style="color:#12a182; font-weight: bold;">20 attempts</span>. 
+      </p>
+      <br>
+      <p>
+        Suicide is a severe issue that people rarely talk about in the public. Thus, we would like to raise the awareness to the suicide issue by showing the relationship between suicide rates with multiple demographic and economical factors, such as age, sex, and countries based on the WHO suicide dataset.
+         </p>
       </header>
-
+   
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2 style="text-align: center;">An Overview</h2>
+      <div id="innerChart-overview"></div>
       <div class="bubbleChart-d3"></div>
-      <div class="bubbleChart text-block">
-        <a name="bubbleChart"></a>
-        <h2>What’s the Suicide Overview in 2015</h2>
-        <p> Explaniation</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h3>Key Findings</h3>
+      <div class="finding_image_one">
+        <img src="data/fing1.png">
+        <p>
+         From the graph above, we see several patterns in this data:
+          <ul>
+            <li>The <span style="color:#eb3c70; font-weight: bold;">male </span>people live in <span style="color:#12a182; font-weight: bold;">Russia</span>, aged <span style="color:#f43e06; font-weight: bold;">35-54 </span>have the highest risk of committing  suicide.</li>
+            <li>There is a large amount of people committed suicide at their <span style="color:#346c9c; font-weight: bold;">35-54.</span></li>
+            <li>There is a much more <span style="color:#eb3c70; font-weight: bold;">male </span> committed suicide than female in 2015.</li>
+          </ul>
+        </p>
       </div>
+      <h3 id="closeLook">Let's take a close look</h3>
+      <div class="age_year" id = 'age_year'>
+        <h2 style="text-align: center;">Age-Year</h2>
+        
+      </div>
+      <div id="innerChart-age"> 
+      <center><iframe id="innerChart-age" src="https://kefanxu.github.io/age2/" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:500px;width:100%;margin: 0;border:none;overflow:hidden;"></iframe></center>
+      <img id = "age-year-img" src="data/age-year.png">
+      <p>
+        According to the global data, starting from the year of 1985 to 2016, the suicide number has increased among all age groups. Specifically, a larger number of suicides were committed within the 35-54-year-old group, closely followed by people 55-74-year-old. People 5-14 and 75+ are less likely to commit suicide.
+      </p>
+    </div>
 
-      <div class="age-d3"></div>
-      <div class="age text-block">
-        <a name="age"></a>
-        <h2>How suicide rates change in different age groups?</h2>
+
+      <!-- <div class="age-d3"></div> -->
+      <div class="ageChart" id='age'>
         <p></p>
       </div>
+      <br>
+      <h2 id="gender" style="text-align: center;">Gender-Continent Relationship Exploration</h2>
+      <br>
+      <div id="sexd3" style="text-align: center;">
+      <div class="sex-d3" id="sex"></div>
+      </div>
+      <br>
+      <div class="Gender-Continent">
+        <p>Among all the regions, Europe has the highest suicide rate, while Africa and North America have the lowest suicide rates. Comparing between females and male. Male in all continents has triple to quadruple of the average suicide rate than female.
 
-      <div class="sex-d3"></div>
-      <div class="sex text-block">
-        <a name="sex"></a>
-        <h2>What’s the relationship between GDP per capita and suicidal rate?</br>
-        What’s the relationship between gender and suicidal rate?</h2>
-        <p></p>
+        </p>
+      </div>
+      <h2 id="conclusion_title">Conclusion</h2>
+      <div class="conclusion" id ='conclusion'>
+        
+        <p> Overall, we found that middle aged male in the age of <span style="color:#f43e06; font-weight: bold;">35 to 54</span>, who lives in <span style="color:#12a182; font-weight: bold;">Europe </span>has the largest potential to commit suicide.</p>
+        
+        <p>There are also <b>limitations</b> in our conclusion: The dataset is not complete in the sense that there are more Europe observations across the years and limited observation from other continents. For example, the dataset does not have any observations from China and India. In addition, there are observation gaps between years such as for Cuba, we only have observations from year 1992 to 2015.  </p>
+          <br>
+          <p>our dataset collected observations from <span style="color:#bec936; font-weight: bold;">1985 to 2016</span>, which is not up-to-date.</p>
+          <br>
+          <br>
+          <p>It is difficult to live as an adult in the world. We have to face many issues, challenges, and downtimes. However, death would not be a way to solve any of the life challenges. Instead, seeking for help from your companions could together sort things out. We believe that with the data shown here, we can raise more awareness towards suicidal prevention actions. If you find yourself or any of your friends have suicidal thoughts or attempts, please never ignore it or make fun of them and seek help ASAP. </p>
+          <br>
+          <br>
+          <span style=" font-weight: 1000;">
+          <h2>How to get help</h2>
+          <p>In the US, call the National Suicide Prevention Lifeline at <span style="color:#82111f;">1-800-273-8255</span>. The International Association for Suicide Prevention and Befrienders Worldwide also provide contact information for crisis centers around the world. (Reference: cnn.com)</span></p>
+          <p>If you or your friends are experiencing mental difficulties, you can always reach out to <a href="https://caps.umich.edu/" style='color: black'>Counseling and Psychological Services (CAPS)</a> on campus.</p>
+      </div>
+      <h2>Reference</h2>
+      <div id="reference">
+          <ul>
+              <li>Vallandingham, Jim. “Creating Bubble Charts with D3v4.” Creating Bubble Charts with D3v4, 13 Nov. 2016, https://vallandingham.me/bubble_charts_with_d3v4.html.</li>
+              <br>
+              <li>Turman, William. “D3 Interactive Streamgraph.” Popular Blocks, http://bl.ocks.org/WillTurman/4631136.</li>
+              <li></li>
+              <li></li>
+            </ul>
+
       </div>
 
-      <div class="conclusion">
-        <a name="conclusion"></a>
-        <h2>Limitation</h2>
-        <p>Data is limited...</p>
-        <h2>Conclusion</h2>
-        <p> Close to 800 000 people die by suicide every year; that’s one person every 40 seconds. Suicide occurs throughout life. It is the second leading cause of death among 15-29 year-olds globally.
-
-Suicide occurs in all regions of the world. In fact, 79% of global suicides happen in low- and middle-income countries. </p>
-        <h2>Reference</h2>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
       <footer>
         <p>University of Michigan School of Information <br/>
           &copy; Kefan Xu, Sophie Niu, Yiqi Ye, 2019</p>
       </footer>
-</div>
-<script type="text/javascript">
-  let jsonSpec="data/visualization.vl.json";
-  vegaEmbed('#sex', jsonSpec,{theme: 'latimes',"renderer":"svg"}).then(function(result) {
-  }).catch(console.error);
-</script>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://npmcdn.com/simple-statistics@2.0.0/dist/simple-statistics.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
+    <script type="text/javascript">
+      let jsonSpec="data/visualization.vl.json";
+      vegaEmbed('#sex', jsonSpec,{theme: 'latimes',"renderer":"svg"}).then(function(result) {
+      }).catch(console.error);
+      
+      $(function(){
+        $("#innerChart-overview").load("bubble.html"); 
+        // $("#innerChart-age").html('<object data="https://kefanxu.github.io/age2/"/>');
+      });
+      
+    </script>
+    <!-- <script src="http://d3js.org/d3.v2.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("#innerChart-age").load("age.html"); 
+      });
+    </script> -->
 
   </body>
 </html>

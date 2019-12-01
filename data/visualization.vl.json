@@ -14,8 +14,25 @@
   "mark": "bar",
   "encoding": {
     "color": {
-      "type": "nominal",
-      "field": "sex"
+      "condition": {
+        "type": "nominal",
+        "field": "sex",
+        "legend": {
+          "title": "Sex by Color"
+        },
+        "scale": {
+          "domain": [
+            "female",
+            "male"
+          ],
+          "range": [
+            "#f43e06",
+            "#12a182"
+          ]
+        },
+        "selection": "selector007"
+      },
+      "value": "lightgray"
     },
     "tooltip": [
       {
@@ -33,11 +50,29 @@
     ],
     "x": {
       "type": "quantitative",
+      "axis": {
+        "tickMinStep": 4,
+        "title": "Average Suicidal Rate (Percentage)"
+      },
       "field": "mean_sui"
     },
     "y": {
       "type": "nominal",
+      "axis": {
+        "title": "Region"
+      },
       "field": "region"
+    }
+  },
+  "selection": {
+    "selector007": {
+      "type": "single",
+      "nearest": true,
+      "on": "mouseover",
+      "fields": [
+        "suicides/100k pop"
+      ],
+      "empty": "all"
     }
   },
   "transform": [

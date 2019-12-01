@@ -1,46 +1,170 @@
-html {
-    scroll-behavior: smooth;
+html{
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-body {
-    background-color: white;
-    font-family: avenirnextltpro-regular, helvetica, arial, sans-serif;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
+body{
+  background-color: white;
+  font-family: avenirnextltpro-regular,helvetica,arial,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+
+}
+header{
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 500px;
+}
+#main h1{
+  font-size: 60px;
+  line-height: 1;
+  padding: 50px 0;
+  padding-top: 100px;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+#main p {
+  text-align: left;
+  line-height:30px;
+  font-size: 20px;
+  padding: 0px;
+  font-family: 'Libre Baskerville', serif;
 }
 
-h1 {
-    font-size: 20px;
-    line-height: 1;
-    padding: 50px 0;
-    text-align: center;
-    color: black;
+
+h2{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 25px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+h3{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 30px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+.finding_image_one p{
+  text-align: left;
+  line-height:30px;
+  font-size: 20px;
+  padding: 0px;
+  font-family: 'Libre Baskerville', serif;
+
+}
+.finding_image_one ul li{
+  text-align: left;
+  line-height:30px;
+  font-size: 20px;
+  padding: 0px;
+  font-family: 'Libre Baskerville', serif;
+}
+#closeLook{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 30px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+#innerChart-age{
+  width: 60%;
+  margin: 0 auto;
+}
+#innerChart-age p{
+  text-align: left;
+
+.Gender-Continent{
+  width: 60%;
+  margin: 0 auto;
+}
+.Gender-Continent p{
+  text-align: left;
+  line-height:30px;
+  font-size: 20px;
+  padding: 0px;
+  font-family: 'Libre Baskerville', serif;
+}
+  
+.conclusion{
+  width: 60%;
+  margin: 0 auto;
+}
+.conclusion p{
+  text-align: left;
+  line-height:30px;
+  font-size: 20px;
+  padding: 0px;
+  font-family: 'Libre Baskerville', serif;
+}
+#conclusion_title{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 30px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+.navigation{
+  position: fixed;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding: 0px;
+  color: black;
+  /* background: blanchedalmond; */
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  border-bottom-color: tomato;
+  
+}
+.navigation ul{
+  padding: 10px;
+  top:0;
+  bottom: 0;
+  list-style-type: none;
+
+  
 }
 
-h2 {
-    font-size: 18px;
-    line-height: 1.5;
+.navigation li{
+  display: inline;
+  padding: 30px;
+  text-decoration: none;
+  font-family: 'Libre Baskerville', serif;
 }
 
-nav ul {
-    list-style-type: none;
+.navigation a{
+  margin: 25px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-nav li {
-    display: inline;
-    padding-right: 20px;
-    text-decoration: none;
-}
-
-nav a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
+.navigation a:hover{
+  /* text-decoration: underline; */
+  color:#f43e06;
 }
 
 .skip a {
@@ -58,19 +182,22 @@ nav a:hover {
     top: 0px;
 }
 
-a:hover {
-    border: 2px solid black;
-}
-:focus {
-    outline: none;
-    border: 2px solid black;
-}
+/* a:hover{
+  border: 2px solid black;
+} */
+/* :focus{
+  outline: none;
+  border: 2px solid black;
+} */
 
-footer {
-    background-color: black;
-    color: white;
-    padding-top: 30px;
-    text-align: center;
+
+footer{
+  background-color: black;
+  width: 100%;
+  color: white;
+  padding:15px;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .nav {
@@ -79,20 +206,34 @@ footer {
     text-align: center;
 }
 
-header {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    height: 400px;
+.finding_image_one img{
+  width: 800px;
 }
-
-header p {
-    color: black;
-    font-size: 16px;
-    padding: 0 100px;
-    text-align: center;
+.finding_image_one{
+  width: 60%;
+  margin: 0 auto;
+}
+#age-year-img{
+  width: 95%;
+  margin-left: 20px;
+  margin-top: -160px;
+}
+#reference{
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+#reference li{ 
+  font-family: 'Libre Baskerville', serif;
+}
+header{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 200px;
+  /* padding-bottom: 400px; */
 }
 
 .text-block {
@@ -103,6 +244,28 @@ header p {
 
 .conclusion {
     text-align: center;
+}
+.bubbleChart{
+  margin: auto;
+  width: 60%;
+}
+#innerChart-age{
+  margin: auto;
+  width: 60%;
+}
+.ageChart{
+  margin: auto;
+  width: 60%;
+}
+#sexd3{
+
+  height: 200px;
+  width: 60%;
+  margin: 0 auto;
+}
+object{
+  width: 1000px;
+  height: 500px;
 }
 
 #sex {
