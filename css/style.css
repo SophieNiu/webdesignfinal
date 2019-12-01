@@ -10,6 +10,7 @@ body{
   font-size: 16px;
   margin: 0;
   padding: 0;
+
 }
 header{
   width: 60%;
@@ -33,6 +34,7 @@ header{
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
 }
+
 
 h2{
   width: 60%;
@@ -89,11 +91,6 @@ h3{
 #innerChart-age p{
   text-align: left;
 
-  line-height:30px;
-  font-size: 20px;
-  padding: 0px;
-  font-family: 'Libre Baskerville', serif;
-}
 .Gender-Continent{
   width: 60%;
   margin: 0 auto;
@@ -104,8 +101,8 @@ h3{
   font-size: 20px;
   padding: 0px;
   font-family: 'Libre Baskerville', serif;
-
 }
+  
 .conclusion{
   width: 60%;
   margin: 0 auto;
@@ -170,19 +167,19 @@ h3{
   color:#f43e06;
 }
 
-.skip a{
-  background: white;
-  left: 0;
-  padding: 6px;
-  position: absolute;
-  top: -40px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
+.skip a {
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
 }
 
 .skip a:focus {
-  top: 0px;
+    top: 0px;
 }
 
 /* a:hover{
@@ -203,7 +200,11 @@ footer{
   font-family: 'Libre Baskerville', serif;
 }
 
-
+.nav {
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+}
 
 .finding_image_one img{
   width: 800px;
@@ -235,17 +236,14 @@ header{
   /* padding-bottom: 400px; */
 }
 
-header p{
-  color: black;
-  font-size: 16px;
-  padding: 0 100px;
-  text-align: center;
+.text-block {
+    align-self: center;
+    justify-self: center;
+    padding: 30px;
 }
 
-.text-block{
-  align-self: center;
-  justify-self: center;
-  padding: 30px;
+.conclusion {
+    text-align: center;
 }
 .bubbleChart{
   margin: auto;
@@ -270,27 +268,27 @@ object{
   height: 500px;
 }
 
-.conclusion{
-  text-align: center;
+#sex {
+    align-content: center;
 }
 
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: auto;
-  }
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 
-  .skip a{
-    background: white;
-    left: 0;
-    padding: 6px;
-    position: absolute;
-    top: -40px;
-    -webkit-transition: initial;
-    transition: initial;
-    z-index: 1;
-  }
+    .skip a {
+        background: white;
+        left: 0;
+        padding: 6px;
+        position: absolute;
+        top: -40px;
+        -webkit-transition: initial;
+        transition: initial;
+        z-index: 1;
+    }
 
-  .skip a:focus{
-    top:0;
-  }
+    .skip a:focus {
+        top: 0;
+    }
 }
