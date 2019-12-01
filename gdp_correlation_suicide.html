@@ -75,21 +75,17 @@
             // in the data array.
             d3.csv("data/data_gdp_simp.csv").then(function(data) {
                 console.log(data.length);
-                var country = data.country;
-                var region = data.region;
-                var gdp_per_capita = data.gdp_per_capita;
-                var suicidal_rate = data.suicidal_perc;
                 console.log(country, region, gdp_per_capita, suicidal_rate);
             });
 
-            d3.csv("data/data_shrink_no_space.csv", conversor, function(data) {
-                console.log(
-                    data.country,
-                    data.region,
-                    +data.gdp_per_capita,
-                    +data.suicidal_perc
-                );
-            });
+            // d3.csv("data/data_shrink_no_space.csv", conversor, function(data) {
+            //     console.log(
+            //         data.country,
+            //         data.region,
+            //         +data.gdp_per_capita,
+            //         +data.suicidal_perc
+            //     );
+            // });
 
             function conversor(d) {
                 d.gdp_per_capita = +d.gdp_per_capita;
