@@ -72,7 +72,7 @@ Here is the list of questions that we would like to explore:
 
 11/26 - Created the index.html and wrote content - Yiqi Ye ~ 2 hours
 
-Thanksgiving - Implement the first and the second d3 graph and reformatting the page layout - Kefan Xu > 8 hours
+Thanksgiving - Implemented the first and the second d3 graph and reformated the page layout - Kefan Xu > 8 hours
 
 ## Reference Code Snippets: 
 1. Streamgraph: https://bl.ocks.org/mbostock/1256572 
