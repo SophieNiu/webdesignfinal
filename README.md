@@ -70,6 +70,8 @@ Here is the list of questions that we would like to explore:
 
 11/15 - one and half hour discussion time
 
+Thanksgiving - Implement the first and the second d3 graph and reformatting the page layout - Kefan Xu > 8 hour
+
 ## Reference Code Snippets: 
 1. Streamgraph: https://bl.ocks.org/mbostock/1256572 
 2. Area: https://www.d3-graph-gallery.com/graph/area_basic.html
