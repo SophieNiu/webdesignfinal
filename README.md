@@ -64,17 +64,21 @@ Here is the list of questions that we would like to explore:
 
 
 ## Time tracking
-11/5 - one hour to select a topic - changed again on 11/13
+11/5 - Group discussion (select a topic) - all ~ 1 hour
 
-11/13 - one hour discussion time 
+11/13 - Group discussion - all ~ 1 hour
 
-11/15 - one and half hour discussion time
+11/15 - Group discussion time - all ~1.5 hours
 
 11/26 - Created the index.html and wrote content - Yiqi Ye > 3 hours
 
-Thanksgiving Break - created and displayed the third graph in the index.html - Sophie Niu > 6 hours
+Thanksgiving Break - Created and implemented the third graph in the index.html - Sophie Niu > 6 hours
 
 Thanksgiving Break- Implemented the first and the second d3 graphs and reformated the page layout - Kefan Xu > 8 hours
+
+12/1 - Group meeting - all ~ 1.5 hours
+
+Total Hour ~ 31 hours
 
 ## Reference Code Snippets: 
 1. Streamgraph: https://bl.ocks.org/mbostock/1256572 
