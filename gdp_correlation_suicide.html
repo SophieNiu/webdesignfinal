@@ -70,28 +70,31 @@
     Finally, here comes the actual JavaScript code.
     -->
         <script>
-            // Life expectancy, poverty rate, and region for all 50 United States.  Data
-            // is also provided for the District of Columbia.  We therefore have 51 items
-            // in the data array.
-            d3.csv("data/data_gdp_simp.csv").then(function(data) {
-                console.log(data.length);
-                console.log(country, region, gdp_per_capita, suicidal_rate);
-            });
+            // GDP per capita for all countries and the overall suicidal rate for the respective countries.
+            // Total 57 countries with valid records
 
-            // d3.csv("data/data_shrink_no_space.csv", conversor, function(data) {
+            // d3.csv("data/data_gdp_simp.csv", function(data) {
             //     console.log(
             //         data.country,
             //         data.region,
             //         +data.gdp_per_capita,
-            //         +data.suicidal_perc
+            //         +data.suicidal_rate
             //     );
             // });
+            var data_1;
 
-            function conversor(d) {
-                d.gdp_per_capita = +d.gdp_per_capita;
-                d.suicidal_perc = +d.suicidal_perc;
-                return d;
-            }
+            d3.csv("data/data_gdp_simp.csv", function(data) {
+                data_1 = {
+                    country: data.country,
+                    region: data.region,
+                    gdp_per_capita: +data.gdp_per_capita,
+                    suicidal_rate: +data.suicidal_rate
+                };
+                data_1 = data.country;
+                // return data_ls;
+            });
+
+            console.log(data_1);
 
             var data = [
                 {
@@ -417,18 +420,16 @@
                 .attr("height", height);
 
             // Define a variety of scales, for color, x axis and y axis.
-            // Poverty rates are all below 30 percent.
-            // need to update the range
+            // GDP per capita are between 1200 and 11000
             var x = d3
                 .scaleLinear()
-                .domain([0, 30])
+                .domain([1200, 11000])
                 .range([margin, width - margin]);
 
-            // Life expectancy values all fall between 70 and 90.
-            // Need to update the range
+            // Suicidal Rate values all fall between 0 and 30.
             var y = d3
                 .scaleLinear()
-                .domain([90, 70])
+                .domain([30, 0])
                 .range([margin, height - margin]);
 
             // There are 6 continents in the dataset
@@ -491,16 +492,19 @@
             // to draw data for the entire US.  It is also called whenever the select control
             // is changed (e.g., to show only the South or only the Northeast).
             function renderVis(_subset) {
-                var data_subset = data;
+                var data_subset = data_1;
+                // console.log(data_subset);
 
-                if (_subset != "View All") {
+                if (_subset != "All") {
                     data_subset = data.filter(function(d) {
                         return d.region == _subset;
                     });
                 }
+
                 // generate the data array for life_expectancy and poverty_rate based on the subset.
                 var suicidal_rate = data_subset.map(function(d) {
-                    return d.suicidal_perc;
+                    console.log(d.suicidal_rate);
+                    return d.suicidal_rate;
                 });
                 var gdp_per_capita = data_subset.map(function(d) {
                     return d.gdp_per_capita;
@@ -549,7 +553,7 @@
                 var circles = svg
                     .selectAll("circle")
                     .data(data_subset, function(d) {
-                        return d.state;
+                        return d.country;
                     });
 
                 circles
@@ -574,11 +578,11 @@
                     })
                     .on("mouseover", function() {
                         document.getElementById("details").innerHTML =
-                            this.__data__.state +
+                            this.__data__.country +
                             " has a suicidal rate of " +
-                            this.__data__.life_expectancy +
-                            " and a gdp per capita (dollars) of " +
-                            this.__data__.poverty_rate +
+                            this.__data__.suicidal_rate +
+                            " per 100k population and a gdp per capita (dollars) of " +
+                            this.__data__.gdp_per_capita +
                             "%.";
                     })
                     .on("mouseout", function() {
@@ -594,7 +598,7 @@
                     .selection()
                     .append("svg:title")
                     .text(function(d) {
-                        return d.state;
+                        return d.country;
                     });
 
                 // Note: we don't need to deal with the update selection.  Because we are not adding new data into the vis.
@@ -611,7 +615,7 @@
             // As the very last step, we make the initial call to renderVis with "us" as the
             // input parameter.  This is because "United States" is the default option for the
             // select control.  We want to default the visualization to show the same thing.
-            renderVis("View All");
+            renderVis("All");
         </script>
     </body>
 </html>
