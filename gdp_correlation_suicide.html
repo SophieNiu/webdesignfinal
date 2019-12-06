@@ -3,6 +3,7 @@
         <title>Continent Suicidal Correlation</title>
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="https://npmcdn.com/simple-statistics@2.0.0/dist/simple-statistics.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         <style>
             /* Style information for axis labels */
@@ -33,9 +34,7 @@
     -->
         <p>
             Select a geographic region:
-            <select
-                onchange="renderVis(this.options[this.selectedIndex].value);"
-            >
+            <select id="dropdown">
                 <option value="All">View All</option>
                 <option value="Africa">Africa</option>
                 <option value="Asia">Asia</option>
@@ -73,347 +72,6 @@
             // GDP per capita for all countries and the overall suicidal rate for the respective countries.
             // Total 57 countries with valid records
 
-            // d3.csv("data/data_gdp_simp.csv", function(data) {
-            //     console.log(
-            //         data.country,
-            //         data.region,
-            //         +data.gdp_per_capita,
-            //         +data.suicidal_rate
-            //     );
-            // });
-            var data_1 = [];
-
-            d3.csv("data/data_gdp_simp.csv").then(function(data) {
-                console.log(data);
-                for (var i = 0; i < data.length; i++) {
-                    var x = {
-                        region: data[i].region,
-                        country: data[i].country,
-                        suicidal_rate: data[i].suicidal_rate,
-                        gdp: data[i].gdp_per_capita
-                    };
-                    data_1.push(x);
-                    // data_1 = {
-                    //     country: data.country,
-                    //     region: data.region,
-                    //     gdp_per_capita: +data.gdp_per_capita,
-                    //     suicidal_rate: +data.suicidal_rate
-                    // };
-                    // data_1 = data.country;
-                    // return data_ls;
-                }
-                // console.log(data_1);
-            });
-
-            var data = [
-                {
-                    state: "Alabama",
-                    life_expectancy: 75.4,
-                    poverty_rate: 22,
-                    region: "South"
-                },
-                {
-                    state: "Alaska",
-                    life_expectancy: 78.3,
-                    poverty_rate: 21,
-                    region: "Other"
-                },
-                {
-                    state: "Arizona",
-                    life_expectancy: 79.6,
-                    poverty_rate: 23,
-                    region: "West"
-                },
-                {
-                    state: "Arkansas",
-                    life_expectancy: 76,
-                    poverty_rate: 22,
-                    region: "South"
-                },
-                {
-                    state: "California",
-                    life_expectancy: 80.8,
-                    poverty_rate: 24,
-                    region: "West"
-                },
-                {
-                    state: "Colorado",
-                    life_expectancy: 80,
-                    poverty_rate: 16,
-                    region: "West"
-                },
-                {
-                    state: "Connecticut",
-                    life_expectancy: 80.8,
-                    poverty_rate: 14,
-                    region: "Northeast"
-                },
-                {
-                    state: "Delaware",
-                    life_expectancy: 78.4,
-                    poverty_rate: 17,
-                    region: "Northeast"
-                },
-                {
-                    state: "District of Columbia",
-                    life_expectancy: 76.5,
-                    poverty_rate: 25,
-                    region: "South"
-                },
-                {
-                    state: "Florida",
-                    life_expectancy: 79.4,
-                    poverty_rate: 20,
-                    region: "South"
-                },
-                {
-                    state: "Georgia",
-                    life_expectancy: 77.2,
-                    poverty_rate: 23,
-                    region: "South"
-                },
-                {
-                    state: "Hawaii",
-                    life_expectancy: 81.3,
-                    poverty_rate: 24,
-                    region: "Other"
-                },
-                {
-                    state: "Idaho",
-                    life_expectancy: 79.5,
-                    poverty_rate: 19,
-                    region: "West"
-                },
-                {
-                    state: "Illinois",
-                    life_expectancy: 79,
-                    poverty_rate: 19,
-                    region: "Midwest"
-                },
-                {
-                    state: "Indiana",
-                    life_expectancy: 77.6,
-                    poverty_rate: 20,
-                    region: "Midwest"
-                },
-                {
-                    state: "Iowa",
-                    life_expectancy: 79.7,
-                    poverty_rate: 14,
-                    region: "Midwest"
-                },
-                {
-                    state: "Kansas",
-                    life_expectancy: 78.7,
-                    poverty_rate: 17,
-                    region: "Midwest"
-                },
-                {
-                    state: "Kentucky",
-                    life_expectancy: 76,
-                    poverty_rate: 22,
-                    region: "South"
-                },
-                {
-                    state: "Louisiana",
-                    life_expectancy: 75.7,
-                    poverty_rate: 27,
-                    region: "South"
-                },
-                {
-                    state: "Maine",
-                    life_expectancy: 79.2,
-                    poverty_rate: 16,
-                    region: "Northeast"
-                },
-                {
-                    state: "Maryland",
-                    life_expectancy: 78.8,
-                    poverty_rate: 16,
-                    region: "Northeast"
-                },
-                {
-                    state: "Massachusetts",
-                    life_expectancy: 80.5,
-                    poverty_rate: 15,
-                    region: "Northeast"
-                },
-                {
-                    state: "Michigan",
-                    life_expectancy: 78.2,
-                    poverty_rate: 20,
-                    region: "Midwest"
-                },
-                {
-                    state: "Minnesota",
-                    life_expectancy: 81.1,
-                    poverty_rate: 13,
-                    region: "Midwest"
-                },
-                {
-                    state: "Mississippi",
-                    life_expectancy: 75,
-                    poverty_rate: 25,
-                    region: "South"
-                },
-                {
-                    state: "Missouri",
-                    life_expectancy: 77.5,
-                    poverty_rate: 19,
-                    region: "Midwest"
-                },
-                {
-                    state: "Montana",
-                    life_expectancy: 78.5,
-                    poverty_rate: 19,
-                    region: "West"
-                },
-                {
-                    state: "Nebraska",
-                    life_expectancy: 79.8,
-                    poverty_rate: 14,
-                    region: "Midwest"
-                },
-                {
-                    state: "Nevada",
-                    life_expectancy: 78.1,
-                    poverty_rate: 21,
-                    region: "West"
-                },
-                {
-                    state: "New Hampshire",
-                    life_expectancy: 80.3,
-                    poverty_rate: 10,
-                    region: "Northeast"
-                },
-                {
-                    state: "New Jersey",
-                    life_expectancy: 80.3,
-                    poverty_rate: 17,
-                    region: "Northeast"
-                },
-                {
-                    state: "New Mexico",
-                    life_expectancy: 78.4,
-                    poverty_rate: 27,
-                    region: "West"
-                },
-                {
-                    state: "New York",
-                    life_expectancy: 80.5,
-                    poverty_rate: 22,
-                    region: "Northeast"
-                },
-                {
-                    state: "North Carolina",
-                    life_expectancy: 77.8,
-                    poverty_rate: 21,
-                    region: "South"
-                },
-                {
-                    state: "North Dakota",
-                    life_expectancy: 79.5,
-                    poverty_rate: 14,
-                    region: "Midwest"
-                },
-                {
-                    state: "Ohio",
-                    life_expectancy: 77.8,
-                    poverty_rate: 20,
-                    region: "Midwest"
-                },
-                {
-                    state: "Oklahoma",
-                    life_expectancy: 75.9,
-                    poverty_rate: 19,
-                    region: "South"
-                },
-                {
-                    state: "Oregon",
-                    life_expectancy: 79.5,
-                    poverty_rate: 19,
-                    region: "West"
-                },
-                {
-                    state: "Pennsylvania",
-                    life_expectancy: 78.5,
-                    poverty_rate: 17,
-                    region: "Northeast"
-                },
-                {
-                    state: "Rhode Island",
-                    life_expectancy: 79.9,
-                    poverty_rate: 18,
-                    region: "Northeast"
-                },
-                {
-                    state: "South Carolina",
-                    life_expectancy: 77,
-                    poverty_rate: 24,
-                    region: "South"
-                },
-                {
-                    state: "South Dakota",
-                    life_expectancy: 79.5,
-                    poverty_rate: 17,
-                    region: "Midwest"
-                },
-                {
-                    state: "Tennessee",
-                    life_expectancy: 76.3,
-                    poverty_rate: 21,
-                    region: "South"
-                },
-                {
-                    state: "Texas",
-                    life_expectancy: 78.5,
-                    poverty_rate: 23,
-                    region: "South"
-                },
-                {
-                    state: "Utah",
-                    life_expectancy: 80.2,
-                    poverty_rate: 16,
-                    region: "West"
-                },
-                {
-                    state: "Vermont",
-                    life_expectancy: 80.5,
-                    poverty_rate: 14,
-                    region: "Northeast"
-                },
-                {
-                    state: "Virginia",
-                    life_expectancy: 79,
-                    poverty_rate: 16,
-                    region: "South"
-                },
-                {
-                    state: "Washington",
-                    life_expectancy: 79.9,
-                    poverty_rate: 16,
-                    region: "West"
-                },
-                {
-                    state: "West Virginia",
-                    life_expectancy: 75.4,
-                    poverty_rate: 21,
-                    region: "South"
-                },
-                {
-                    state: "Wisconsin",
-                    life_expectancy: 80,
-                    poverty_rate: 15,
-                    region: "Midwest"
-                },
-                {
-                    state: "Wyoming",
-                    life_expectancy: 78.3,
-                    poverty_rate: 14,
-                    region: "West"
-                }
-            ];
-
             // This variable is used to define size of the visualization canvas and the
             // margin (or "padding") around the scatter plot.  We use the margin to draw
             // things like axis labels.
@@ -432,13 +90,13 @@
             // GDP per capita are between 1200 and 11000
             var x = d3
                 .scaleLinear()
-                .domain([1200, 11000])
+                // .domain([1200, 12000])
                 .range([margin, width - margin]);
 
             // Suicidal Rate values all fall between 0 and 30.
             var y = d3
                 .scaleLinear()
-                .domain([30, 0])
+                // .domain([30, 0])
                 .range([margin, height - margin]);
 
             // There are 6 continents in the dataset
@@ -451,33 +109,6 @@
                 "Oceania"
             ];
             var region_color = d3.scaleOrdinal(d3.schemeCategory10);
-
-            // Add axes.  First the X axis and label.
-            svg.append("g")
-                .attr("class", "axis")
-                .attr("transform", "translate(0," + (500 - margin) + ")")
-                .call(d3.axisBottom(x));
-
-            svg.append("text")
-                .attr("class", "axis-label")
-                .attr("y", 495)
-                .attr("x", 0 + 500 / 2)
-                .style("text-anchor", "middle")
-                .text("GDP per capita");
-
-            // Now the Y axis and label.
-            svg.append("g")
-                .attr("class", "axis")
-                .attr("transform", "translate(" + margin + ",0)")
-                .call(d3.axisLeft(y));
-
-            svg.append("text")
-                .attr("transform", "rotate(90)")
-                .attr("class", "axis-label")
-                .attr("y", -5)
-                .attr("x", 0 + 500 / 2)
-                .style("text-anchor", "middle")
-                .text("Suicidal Rate");
 
             // Now a clipping plain for the main axes
             // Add the clip path.
@@ -512,11 +143,11 @@
 
                 // generate the data array for life_expectancy and poverty_rate based on the subset.
                 var suicidal_rate = data_subset.map(function(d) {
-                    console.log("suicidal rate: ", d.suicidal_rate);
-                    return d.suicidal_rate;
+                    // console.log("suicidal rate: ", d.suicidal_rate);
+                    return parseFloat(d.suicidal_rate);
                 });
                 var gdp_per_capita = data_subset.map(function(d) {
-                    return d.gdp_per_capita;
+                    return parseFloat(d.gdp_per_capita);
                 });
 
                 // Update the correlation score based on the requested data subset.
@@ -525,11 +156,13 @@
                 // Compute the regression line.
                 var zipped_data = d3.zip(gdp_per_capita, suicidal_rate);
                 var linreg = ss.linearRegression(zipped_data);
+                console.log(zipped_data);
 
                 var linear_model = ss.linearRegressionLine(linreg);
                 linear_model(c);
 
                 //render the correlation text.
+                console.log(linreg.m);
                 document.getElementById("correlation").innerHTML =
                     "In " +
                     _subset +
@@ -537,7 +170,7 @@
                     c +
                     "." +
                     " with regression line marked by m = " +
-                    linreg.m.toFixed(2) +
+                    linreg.m.toFixed(7) +
                     ", and b = " +
                     linreg.b.toFixed(2) +
                     ".";
@@ -548,15 +181,16 @@
                 //and https://bl.ocks.org/ctufts/298bfe4b11989960eeeecc9394e9f118.
                 //I discussed with Yaya Liu about how to make it only show one line.
                 // why i have multiple lines with same slope if i do selectAll?
-
+                var left_most_x = x.range()[0];
+                var right_most_x = x.range()[1];
+                var right_most_gdp = x.domain()[1];
                 regLine
                     .transition()
                     .duration(1000)
-                    .attr("x1", x([0]))
+                    .attr("x1", left_most_x)
                     .attr("y1", y(linreg.b))
-                    .attr("x2", x([30]))
-                    .attr("y2", y(linear_model([30])));
-                //                .attr("y2", y((30 * linreg.m) + linreg.b));
+                    .attr("x2", right_most_x)
+                    .attr("y2", y(right_most_gdp * linreg.m + linreg.b));
 
                 // Render the scatterplot.
                 var circles = svg
@@ -592,7 +226,7 @@
                             this.__data__.suicidal_rate +
                             " per 100k population and a gdp per capita (dollars) of " +
                             this.__data__.gdp_per_capita +
-                            "%.";
+                            ".";
                     })
                     .on("mouseout", function() {
                         document.getElementById("details").innerHTML = "&nbsp;";
@@ -624,7 +258,57 @@
             // As the very last step, we make the initial call to renderVis with "us" as the
             // input parameter.  This is because "United States" is the default option for the
             // select control.  We want to default the visualization to show the same thing.
-            renderVis("All");
+
+            d3.csv("data/data_gdp_simp.csv").then(function(data) {
+                min_x = d3.min(data, function(d) {
+                    return parseFloat(d.gdp_per_capita);
+                });
+                max_x = d3.max(data, function(d) {
+                    return parseFloat(d.gdp_per_capita);
+                });
+
+                min_y = d3.min(data, function(d) {
+                    return parseFloat(d.suicidal_rate);
+                });
+                max_y = d3.max(data, function(d) {
+                    return parseFloat(d.suicidal_rate);
+                });
+                console.log(min_x, max_x);
+                // console.log(data);
+                x.domain([min_x, max_x]);
+                y.domain([max_y, min_y]);
+                // Add axes.  First the X axis and label.
+                svg.append("g")
+                    .attr("class", "axis")
+                    .attr("transform", "translate(0," + (500 - margin) + ")")
+                    .call(d3.axisBottom(x));
+
+                svg.append("text")
+                    .attr("class", "axis-label")
+                    .attr("y", 495)
+                    .attr("x", 0 + 500 / 2)
+                    .style("text-anchor", "middle")
+                    .text("GDP per capita");
+
+                // Now the Y axis and label.
+                svg.append("g")
+                    .attr("class", "axis")
+                    .attr("transform", "translate(" + margin + ",0)")
+                    .call(d3.axisLeft(y));
+
+                svg.append("text")
+                    .attr("transform", "rotate(90)")
+                    .attr("class", "axis-label")
+                    .attr("y", -5)
+                    .attr("x", 0 + 500 / 2)
+                    .style("text-anchor", "middle")
+                    .text("Suicidal Rate");
+
+                renderVis("All", data);
+                $("#dropdown").change(function() {
+                    renderVis(this.options[this.selectedIndex].value, data);
+                });
+            });
         </script>
     </body>
 </html>
