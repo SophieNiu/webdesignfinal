@@ -81,20 +81,29 @@
             //         +data.suicidal_rate
             //     );
             // });
-            var data_1;
+            var data_1 = [];
 
-            d3.csv("data/data_gdp_simp.csv", function(data) {
-                data_1 = {
-                    country: data.country,
-                    region: data.region,
-                    gdp_per_capita: +data.gdp_per_capita,
-                    suicidal_rate: +data.suicidal_rate
-                };
-                data_1 = data.country;
-                // return data_ls;
+            d3.csv("data/data_gdp_simp.csv").then(function(data) {
+                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    var x = {
+                        region: data[i].region,
+                        country: data[i].country,
+                        suicidal_rate: data[i].suicidal_rate,
+                        gdp: data[i].gdp_per_capita
+                    };
+                    data_1.push(x);
+                    // data_1 = {
+                    //     country: data.country,
+                    //     region: data.region,
+                    //     gdp_per_capita: +data.gdp_per_capita,
+                    //     suicidal_rate: +data.suicidal_rate
+                    // };
+                    // data_1 = data.country;
+                    // return data_ls;
+                }
+                // console.log(data_1);
             });
-
-            console.log(data_1);
 
             var data = [
                 {
@@ -491,8 +500,8 @@
             // Next, we define the renderVis callback.  This is used when the page first loads
             // to draw data for the entire US.  It is also called whenever the select control
             // is changed (e.g., to show only the South or only the Northeast).
-            function renderVis(_subset) {
-                var data_subset = data_1;
+            function renderVis(_subset, data) {
+                var data_subset = data;
                 // console.log(data_subset);
 
                 if (_subset != "All") {
@@ -503,7 +512,7 @@
 
                 // generate the data array for life_expectancy and poverty_rate based on the subset.
                 var suicidal_rate = data_subset.map(function(d) {
-                    console.log(d.suicidal_rate);
+                    console.log("suicidal rate: ", d.suicidal_rate);
                     return d.suicidal_rate;
                 });
                 var gdp_per_capita = data_subset.map(function(d) {
